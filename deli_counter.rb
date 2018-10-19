@@ -29,3 +29,4 @@ end
 line = []
 take_a_number(line, "Brandon")
 take_a_number(line, "Sally")
+now_serving(line)
