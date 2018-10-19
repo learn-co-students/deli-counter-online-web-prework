@@ -22,7 +22,11 @@ def now_serving(katz_deli)
     return
   end
   serving = katz_deli.shift
-  puts "Currently serving #{serving}."
+  if(kaz_deli[serving] == "Sally")
+    puts "Your meal is free"
+  else 
+    puts "Currently serving #{serving}."
+  end
 end
 
 line = []
