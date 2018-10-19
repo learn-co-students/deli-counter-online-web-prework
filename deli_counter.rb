@@ -26,3 +26,5 @@ def now_serving
   puts "Currently serving #{serving}."
 end
 
+line = []
+take_a_number(line, "Brandon")
