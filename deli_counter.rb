@@ -22,8 +22,8 @@ def now_serving(katz_deli)
     return
   end
   serving = katz_deli.shift
-  if(server == "Sally")
-    puts "Your meal is free"
+  if(serving == "Sally")
+    puts "Currently serving #{serving}. Your meal is free"
   else 
     puts "Currently serving #{serving}."
   end
