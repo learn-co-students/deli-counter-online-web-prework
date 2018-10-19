@@ -16,8 +16,7 @@ end
   puts "Welcome, #{string}. You are number #{array.count} in line."
  end
  
-def now_serving
- katz_deli = []
+def now_serving(katz_deli)
   if katz_deli.length == 0
     puts "There is nobody waiting to be served!"
     return
@@ -29,4 +28,4 @@ end
 line = []
 take_a_number(line, "Brandon")
 take_a_number(line, "Sally")
-now_serving
+now_serving(line)
