@@ -7,7 +7,7 @@ def line(katz_deli)
   puts "The line is currently:" += " #{index.to_i+1}. #{element}"
   end 
   puts  "The line is currently:"
-   
+ end
 end
  
  
