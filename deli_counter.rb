@@ -15,17 +15,10 @@ def take_a_number(deli, name)
     puts "Welcome, #{name}. You are number 1 in line."
   else
     deli.push(name)
-    position = deli.index(name)
-      puts "Welcome, #{name}. You are number #{position + 1} in line."
+      puts "Welcome, #{name}. You are number #{deli.count} in line."
   end
 end
 
 def now_serving(deli)
-  if deli == []
-    puts "There is nobody waiting to be served!"
-  else
-    name = deli[0]
-    puts "Currently serving #{name}."
-    deli.shift
-  end
+ deli == [] ? (puts "There is nobody waiting to be served!") : (puts "Currently serving #{deli.shift}.")
 end
