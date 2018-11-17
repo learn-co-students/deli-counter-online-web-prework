@@ -1,13 +1,30 @@
 # Write your code here.
-katz_deli []
-other_deli ["Logan", "Avi", "Spencer"] }
-another_deli ["Amanda", "Annette", "Ruchi", "Jason", "Logan", "Spencer", "Avi", "Joe", "Rachel", "Lindsey"]
+
 
 def line(deli)
-  
   if deli.empty?
     puts "The line is currently empty."
   else 
-    print "The line is currently: "
-    deli.each_with_index { |name, position| print " #{position + 1}. #{name} "
+    intro = "The line is currently:"
+    deli.each_with_index { |name, position| intro += " #{position + 1}. #{name}"}
+    puts intro
+  end
+end
+
+def take_a_number(deli, new_cust)
+  if deli.empty?
+    deli.push(new_cust)
+    puts "Welcome, #{new_cust}. You are number #{deli.count} in line."
+  else
+    deli.push(new_cust)
+    puts "Welcome, #{new_cust}. You are number #{deli.count} in line."
+  end
+end
+
+def now_serving(deli)
+  if deli.empty?
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{deli.shift}."
+  end
 end
