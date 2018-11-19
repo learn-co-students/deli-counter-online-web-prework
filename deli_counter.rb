@@ -1,4 +1,4 @@
-katz_deli = []
+$ticket = 1
 
 def line(i)
   line_array = []
@@ -11,9 +11,12 @@ def line(i)
     puts "The line is currently: #{line_array.join(" ")}"
   end
 end
-def take_a_number(katz_deli, name)
-  katz_deli.push(name)
-  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+def take_a_number(katz_deli)
+  #katz_deli is an array of ticket numbers, not names
+  #counter = 1
+  katz_deli.push($ticket)
+  puts "Welcome, you are ticket number #{$ticket}. You are number #{katz_deli.length} in line."
+  $ticket += 1
 end
 def now_serving(array)
   if array.empty?
@@ -23,3 +26,12 @@ def now_serving(array)
     array.shift
   end
 end
+katz_deli = []
+
+take_a_number(katz_deli)
+take_a_number(katz_deli)
+now_serving(katz_deli)
+now_serving(katz_deli)
+take_a_number(katz_deli)
+now_serving(katz_deli)
+#Welcom, you are ticket number 1. You are number 1 in line.
