@@ -1,7 +1,5 @@
 require "pry"
 
-#Deli wants to keep track of their que(list of costumers = creating an array)
-#beginning of the the que is empty
 
 katz_deli = []
 
@@ -20,7 +18,6 @@ def take_a_number(current_line, name)
   current_line << name # this person will take a number (adding them to the array)
   puts "Welcome, #{name}. You are number #{(current_line.index(name)) + 1} in line."
   #this number will place them at the end of the line and it should say their position this will be printed
-  
 end
 
 def now_serving(array_que)
@@ -29,11 +26,5 @@ def now_serving(array_que)
   else
     next_customer = array_que.shift
     puts "Currently serving #{next_customer}."
-    
   end  
-    
-  #will call the next person in the line 
-  #remove them from the que 
-  #moves the other customers up the array 
-
 end 
