@@ -12,18 +12,19 @@ def line(katz_deli)
 end 
 
 
-
-
-
-
-
-
-def take_a_number(katz_deli, name)
-  new_line = []
-i = katz_deli.length
-if i > 0 
-  puts "Welcome, #{name}. You are number #{index} in line."
+def take_a_number(line, name)
+line.push(name)
+  puts "Welcome, #{name}. You are number #{line.length} in line."
 end
+
+
+
+def now_serving(katz_deli)
+  i = katz_deli.length
+    if i == 0
+      puts "There is nobody waiting to be served!"
+    elsif i > 0 
+      puts "Currently serving #{katz_deli.shift}."
+end      
 end
-  
 
