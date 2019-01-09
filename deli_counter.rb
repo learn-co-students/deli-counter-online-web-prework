@@ -14,8 +14,8 @@ end
 
 def take_a_number(katz_deli, name)
   katz_deli << name 
-  place_in_line = katz_deli.length - 1
-  puts "Welcome, #{name}. You are number #{place_in_line + 1} in line."
+  place_in_line = katz_deli.length
+  puts "Welcome, #{name}. You are number #{place_in_line} in line."
 end
 
 def now_serving(line)
