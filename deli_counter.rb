@@ -4,12 +4,14 @@ def line(katz_deli)
   if katz_deli.length == 0 
     puts "The line is currently empty."
   end
+#  ["Logan", "Avi", "Spencer"]
+ #string = "This line is currently: "
   if katz_deli.length > 0
-     katz_deli.each_with_index do |index,name|
-    puts "The line is currently: #{index},#{name}"
+     katz_deli.each_with_index do |name,index|
+    puts "The line is currently: #{index + 1}. #{name}"
   end
- # katz_deli.unshift(["Logan", "Avi", "Spencer"])
 end
+#current line = 
 end
 #end
 
