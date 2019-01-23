@@ -1,5 +1,3 @@
-# Write your code here.
-require 'pry'
 def line(katz_deli)
   #binding.pry
   if katz_deli.length == 0 
@@ -14,28 +12,16 @@ end
 end
 
 def take_a_number(katz_deli,name)
- name = new_person
- if katz_deli.length == 0 
-     
-     puts "Welcome, #{name}. You are number #{index} in line.")
-#Ada
-end
-#new_person added to end of line/array/last index slot
-#puts new_person name + index # +1 
-
+    katz_deli << name
+    puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
 end
 
+def now_serving(katz_deli)
+  if katz_deli.length > 0
+    puts "Currently serving #{katz_deli.first}."
+    katz_deli.shift
+  else
+     puts "There is nobody waiting to be served!"
+  end
+end
 
-#current line = 
-#end
-#end
-
-
-=begin
-attendees.each_with_index do |name, index| 
-room_assignments.push("Hello, #{name}\! You'll be assigned to room #{index +1}\!") 
-end 
-room_assignments
-end 
-
-=end
