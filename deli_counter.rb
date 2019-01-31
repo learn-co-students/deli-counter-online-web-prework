@@ -1,5 +1,6 @@
 # Write your code here.
 katz_deli = []
+$ticket = 1
 
 def line(array)
   line_txt = "The line is currently:"
@@ -13,20 +14,29 @@ def line(array)
   end
 end
 
-def take_a_number(array, name)
-  array << name
-  puts "Welcome, #{name}. You are number #{array.length} in line."
+def take_a_number(array)
+  #array will now be an array of ticket numbers, not an array of names
+  number = $ticket
+  array << number
+  puts "Welcome, you are ticket number #{number}. You are number #{array.length} in line."
+  $ticket += 1
 end
 
 def now_serving(array)
   if array.empty?
     puts "There is nobody waiting to be served!"
   else
-    person = array.shift
-    puts "Currently serving #{person}."
+    number = array.shift
+    puts "Currently serving #{number}."
   end
 end
 
-array = ["Ada", "Grace", "Kent"]
+array = []
+take_a_number(array)
+take_a_number(array)
 now_serving(array)
-puts array.to_s
+now_serving(array)
+take_a_number(array)
+take_a_number(array)
+take_a_number(array)
+now_serving(array)
