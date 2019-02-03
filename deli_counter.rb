@@ -1,26 +1,27 @@
 # Write your code here.
-def line(current_line)
-  if current_line.length == 0
-    puts "The line is currently empty."
+katz_deli = []
+
+def take_a_number(array, customer)
+  array << customer
+  puts "Welcome, #{customer}. You are number #{array.length} in line."
+end
+
+def now_serving(array)
+  if array.length == 0
+    puts "There is nobody waiting to be served!"
   else
-    response = "The line is currently:"
-    current_line.each_with_index { |name, index|
-      response += " #{index + 1}. #{name}"
-    }
-    puts response
+    puts "Currently serving #{array.shift}."
   end
 end
 
-def take_a_number(current_line, name)
-  puts "Welcome, #{name}. You are number #{current_line.length + 1} in line."
-  current_line.push(name)
-end
-
-def now_serving(current_line)
-  if current_line.length == 0
-    puts "There is nobody waiting to be served!"
+def line(array)
+  if array.length == 0
+    puts "The line is currently empty."
   else
-    puts "Currently serving #{current_line[0]}."
-    return current_line.shift
+    line_status = "The line is currently:"
+    array.each_with_index { |name, index|
+    line_status << " #{index+1}. #{name}" }
+    puts line_status
+    #"The line is currently: 1. Grace 2. Kent 3. Matz"
   end
 end
