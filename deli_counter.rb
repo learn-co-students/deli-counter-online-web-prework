@@ -13,7 +13,7 @@ end
 
 def take_a_number(katz_deli, new_customer)
   katz_deli.push(new_customer)
-  last_in_line_number = (katz_deli.index(new_customer)+1)
+  last_in_line_number = katz_deli.index(new_customer)+1
   last_in_line_name = katz_deli.last
   puts "Welcome, #{last_in_line_name}. You are number #{last_in_line_number} in line."
 end
