@@ -23,13 +23,26 @@ end
  end
  
  def take_a_number(katz_deli, name)
-   name = "Ada"
-   if katz_deli.size == 0
+   
+    if   katz_deli.push(name)
+         num = katz_deli.size 
+      
+      puts "Welcome, Ada. You are number #{num} in line."
+    else 
+    
+      katz_deli.push(name)
+      
+      
+      puts "Welcome, Grace. You are number #{num} in line."
      
-     katz_deli.push(name)
+   end 
+  
      
-          puts "Welcome, Ada. You are number 1 in line."
-     
-   end
+ end 
  
-   end
+  
+  
+
+   
+ 
+  
