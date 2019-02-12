@@ -27,13 +27,14 @@ end
     if   katz_deli.push(name)
          num = katz_deli.size 
       
-      puts "Welcome, Ada. You are number #{num} in line."
+      puts "Welcome, #{name}. You are number #{num} in line."
     else 
     
       katz_deli.push(name)
       
       
-      puts "Welcome, Grace. You are number #{num} in line."
+      
+      puts "Welcome, #{name}. You are number #{num} in line."
      
    end 
   
