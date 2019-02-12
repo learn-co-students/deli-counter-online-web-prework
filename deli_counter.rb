@@ -22,18 +22,14 @@ end
 
  end
  
- def take_a_number(katz_deli, message)
-   
-   
-   
-   katz_deli.include?("Ada")
-   
-   puts "Welcome, #{"
+ def take_a_number(katz_deli, name)
+   name = "Ada"
+   if katz_deli.size == 0
+     
+     katz_deli.push(name)
+     
+          puts "Welcome, Ada. You are number 1 in line."
      
    end
-   
-   
- end
  
-
-
+   end
