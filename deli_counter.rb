@@ -7,12 +7,14 @@ def line(array)
   if array.length == 0
     puts "The line is currently empty."
   else 
-   names = array
+   names = []
     greeting = "The line is currently:"
     array.each_with_index do |value, index|
-      greeting +=  " #{index +1}. #{value}" 
+      names.push("#{index +1}. #{value}") 
+     binding.pry 
 end
-puts greeting
+puts greeting + " " + names.join(" ")
+#puts greeting
 end
 end
 
@@ -23,13 +25,18 @@ def take_a_number(array, name)
   
 end
   
+# #def now_serving(array)
+#   #if array.length == 0
+#   # puts "There is nobody waiting to be served!"
+# # else 
+#   # puts "Currently serving #{array.shift}."
+# end
+# end
 def now_serving(array)
-  if array.length == 0
-    puts "There is nobody waiting to be served!"
-  else 
-    puts "Currently serving #{array.shift}."
+  (array.length == 0) ? (puts "There is nobody waiting to be served!") : (puts "Currently serving #{array.shift}.")
+  
 end
-end
+
 #binding.pry
 
 
