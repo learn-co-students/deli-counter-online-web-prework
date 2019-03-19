@@ -3,8 +3,8 @@ def line(array)
     puts "The line is currently empty."
   else
     new_line_array = []
-    array.each_with_index do |name, i|   # #[" 1. Logan", " 2. Avi", " 3. Spencer"]
-      new_line_array.push(" #{i + 1}. #{name}") #new_line_array.join // 1. Logan 2. Avi 3. Spencer
+    array.each_with_index do |name, i|
+      new_line_array.push(" #{i + 1}. #{name}")
    end
   puts "The line is currently:#{new_line_array.join}"
   end
@@ -19,7 +19,7 @@ def now_serving(array)
   if array.empty?
     puts "There is nobody waiting to be served!"
   else
-    person_being_served = array.shift #shift removes item from front of array
+    person_being_served = array.shift
     puts "Currently serving #{person_being_served}."
   end
 end
