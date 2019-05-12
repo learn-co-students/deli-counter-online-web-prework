@@ -8,4 +8,4 @@ require_relative '../deli_counter'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # config here
-end
+le
