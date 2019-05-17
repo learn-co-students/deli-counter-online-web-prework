@@ -9,3 +9,9 @@ else
   puts string
    end
 end
+
+def take_a_number(people, person)
+  if people.empty?
+  
+end
+end
