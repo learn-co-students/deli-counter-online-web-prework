@@ -1,7 +1,11 @@
 def line(people)
-if people == []
+if people.empty?
 puts "The line is currently empty."
-elsif people >= []
-  puts ""
- end
+else
+  string = "The line is currently:"
+  people.each.with_index(1) do |people, person|
+  string << (" #{person}. #{people}")
+        end
+  puts string
+   end
 end
