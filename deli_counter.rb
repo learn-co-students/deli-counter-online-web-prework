@@ -13,8 +13,11 @@ def line(katz_deli)
   end
 end
 
-
-
-
-
-
+def take_a_number(line_array, name)
+  line_array << name
+  index = line_array.rindex(name)
+  puts "Welcome, #{name}. You are number #{index + 1} in line."
+end
+    
+    
+  
