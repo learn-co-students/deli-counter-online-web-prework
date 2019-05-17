@@ -1,6 +1,7 @@
+
 def line(people)
-if people.empty?
-puts "The line is currently empty."
+    if people.empty?
+      puts "The line is currently empty."
 else
   string = "The line is currently:"
   people.each.with_index(1) do |people, person|
@@ -11,7 +12,18 @@ else
 end
 
 def take_a_number(people, person)
-  if people.empty?
+   people << person
+if !people.empty?
+        puts "Welcome, #{person}. You are number #{people.length} in line."
+    end
+  end
   
+def now_serving(people)
+  if people.empty?
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{people[0]}."
+  people.shift
+  end
 end
-end
+
