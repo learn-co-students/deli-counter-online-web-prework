@@ -19,5 +19,11 @@ def take_a_number(line_array, name)
   puts "Welcome, #{name}. You are number #{index + 1} in line."
 end
     
-    
-  
+def now_serving(katz_deli)
+  if katz_deli == []
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{katz_deli[0]}."
+    katz_deli.shift
+  end
+end
