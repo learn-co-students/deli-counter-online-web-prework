@@ -1,13 +1,14 @@
 def line(arr)
   if !arr.empty?
-		print "The line is currently:"
+		str = "The line is currently:"
 		arr.each_with_index do |name, index|
-		  print " ",index+1,". ",name
+		  # print " ",index+1,". ",name
+		  str = str + " #{index+1}. #{name}"
 		end
+		puts str
 	else
 		puts "The line is currently empty."
 	end
-
 end
 
 def take_a_number(arr,name)
