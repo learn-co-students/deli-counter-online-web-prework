@@ -11,9 +11,8 @@ describe 'Deli Counter' do
         # to make sure the correct output has been puts'ed.
         expect($stdout).to receive(:puts).with("The line is currently empty.")
         line(katz_deli)
-      end 
+      end
     end
-
     context "there are people in line" do
       it "should display the current line" do
         expect($stdout).to receive(:puts).with("The line is currently: 1. Logan 2. Avi 3. Spencer")
