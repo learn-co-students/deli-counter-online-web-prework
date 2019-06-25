@@ -2,7 +2,7 @@ katz_deli = []
 def take_a_number(array, name)
   array.push(name)
   position = array.index(name)
-  puts "Welcome, #{name}. You are number #{array.index(name)+1} in line."
+  puts "Welcome, #{name}. You are number #{position+1} in line."
   return name, position 
 end 
 
@@ -29,7 +29,7 @@ line(katz_deli)
 def now_serving(array)
   if array.empty? == true 
     puts "There is nobody waiting to be served!"
-  elsif array.empty? == false 
+  else array.empty? == false 
     puts "Currently serving #{array.shift}."
   end 
 end
